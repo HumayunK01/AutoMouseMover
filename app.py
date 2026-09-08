@@ -24,6 +24,8 @@ import pystray
 
 from mover_engine import MoverEngine
 
+APP_VERSION = "v1.0.0"
+
 # Win32 Constants for Global Hotkey
 WM_HOTKEY = 0x0312
 VK_F6 = 0x75
@@ -169,7 +171,7 @@ class ModernMouseMoverApp(ctk.CTk):
     def __init__(self):
         super().__init__()
 
-        self.title("Auto Mouse Mover")
+        self.title(f"Auto Mouse Mover {APP_VERSION}")
 
         # Fixed dimensions (fullscreen and window resizing disabled)
         self.geometry("460x570")
@@ -329,7 +331,7 @@ class ModernMouseMoverApp(ctk.CTk):
         self.tray_icon = pystray.Icon(
             "AutoMouseMover",
             create_tray_image("idle"),
-            "Auto Mouse Mover (F6 to toggle)",
+            f"Auto Mouse Mover {APP_VERSION} (F6 to toggle)",
             menu,
         )
 
@@ -341,7 +343,7 @@ class ModernMouseMoverApp(ctk.CTk):
         if self.tray_icon:
             try:
                 self.tray_icon.icon = create_tray_image(status)
-                tip = "Auto Mouse Mover (Running • F6)" if status == "running" else "Auto Mouse Mover (Idle • F6)"
+                tip = f"Auto Mouse Mover {APP_VERSION} (Running • F6)" if status == "running" else f"Auto Mouse Mover {APP_VERSION} (Idle • F6)"
                 self.tray_icon.title = tip
             except Exception:
                 pass
@@ -568,6 +570,18 @@ class ModernMouseMoverApp(ctk.CTk):
             text_color=self.CLR_TEXT_HEADER,
         )
         app_title.pack(side="left")
+
+        version_badge = ctk.CTkLabel(
+            title_box,
+            text=APP_VERSION,
+            font=self.font_caption_bold,
+            text_color=self.CLR_TEXT_MUTED,
+            fg_color=("#e2e8f0", "#1e293b"),
+            corner_radius=4,
+            width=44,
+            height=20,
+        )
+        version_badge.pack(side="left", padx=(8, 0))
 
         # Controls (Theme + Tray)
         controls_box = ctk.CTkFrame(header, fg_color="transparent")
