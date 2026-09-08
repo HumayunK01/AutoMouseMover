@@ -1,0 +1,37 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution & PyInstaller builds
+build/
+dist/
+*.manifest
+*.spec.bak
+
+# Standalone executable (publish releases to GitHub Releases)
+*.exe
+
+# Virtual environments
+.venv/
+env/
+venv/
+ENV/
+
+# IDEs & Editor configurations
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Operating System files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+
+# Logs & Temporary files
+*.log
+crash.log
