@@ -1,5 +1,7 @@
 # <img src="assets/mouse.png" width="36" valign="middle" alt="Auto Mouse Mover Logo" /> Auto Mouse Mover
 
+[![Latest Release](https://img.shields.io/github/v/release/HumayunK01/AutoMouseMover?color=success&label=Release)](https://github.com/HumayunK01/AutoMouseMover/releases/latest)
+[![Direct Download](https://img.shields.io/badge/Download-AutoMouseMover.exe-4f46e5?logo=windows&logoColor=white)](https://github.com/HumayunK01/AutoMouseMover/releases/latest/download/AutoMouseMover.exe)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Platform: Windows](https://img.shields.io/badge/Platform-Windows%2010%20%7C%2011-0078D6.svg)](https://microsoft.com/windows)
 [![Cost: 100% Free](https://img.shields.io/badge/Cost-100%25%20Free%20%26%20Open%20Source-28a745.svg)](#)
@@ -105,16 +107,23 @@ Auto Mouse Mover interacts directly with:
 
 ---
 
-## 🚀 Quick Start Guide
+## 📥 Download & Installation
 
-### Option 1: Standalone Portable Binary (No Python Needed)
-1. Download **`AutoMouseMover.exe`** from the repository or Releases.
-2. Double-click to launch (no installation or admin rights required).
-3. Select your movement mode, adjust your interval, and click **Start** (or press **`F6`**).
+### Option 1: Direct Download (Recommended — No Setup Required)
 
-*(Optional)* Run `CreateDesktopShortcut.bat` to place a clean desktop shortcut with the official icon.
+1. Download **[`AutoMouseMover.exe`](https://github.com/HumayunK01/AutoMouseMover/releases/latest/download/AutoMouseMover.exe)** from the [Latest GitHub Release](https://github.com/HumayunK01/AutoMouseMover/releases/latest).
+2. Double-click the downloaded `.exe` to run immediately.
+   - **No installation wizard** or setup required.
+   - **No administrator permissions** needed.
+   - Portable: run it directly from your Downloads, Desktop, or a USB drive.
+
+*(Optional)* Run `CreateDesktopShortcut.bat` to create an official desktop shortcut with the app icon.
+
+---
 
 ### Option 2: Run from Source (Python)
+
+If you prefer running directly from source code:
 
 ```powershell
 # 1. Clone the repository
@@ -125,10 +134,8 @@ cd AutoMouseMover
 python -m venv .venv
 .venv\Scripts\Activate.ps1
 
-# 3. Install requirements
+# 3. Install dependencies & launch
 pip install -r requirements.txt
-
-# 4. Launch
 python main.py
 ```
 *(Or double-click `run.bat` to launch automatically.)*
